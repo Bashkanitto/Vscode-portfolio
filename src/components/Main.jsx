@@ -18,23 +18,25 @@ export const Main = () => {
 					</p>
 				))}
 			</div>
-			<div className='min-w-[50%] min-h-[80vh] max-h-[80vh] overflow-scroll'>
-				<CodeEditor
-					value={projectList[activeIndex].code}
-					language='js'
-					className='w-full'
-					data-color-mode='dark'
-					style={{
-						backgroundColor: 'rgb(29,29,29)',
-					}}
-				/>
-			</div>
+			<div className='flex flex-col md:flex-row'>
+				<div className='min-w-[50%] min-h-[40vh] md:min-h-[80vh] max-h-[40vh] md:max-h-[80vh] overflow-scroll'>
+					<CodeEditor
+						value={projectList[activeIndex].code}
+						language='js'
+						className='w-full'
+						data-color-mode='dark'
+						style={{
+							backgroundColor: 'rgb(29,29,29)',
+						}}
+					/>
+				</div>
 
-			{isPreviewActive && (
-				<aside className='min-w-1/2 h-[80vh] overflow-scroll bg-white'>
-					<img src={projectList[activeIndex].preview} alt='' />
-				</aside>
-			)}
+				{isPreviewActive && (
+					<aside className='min-w-1/2 h-[80vh] overflow-scroll bg-white'>
+						<img src={projectList[activeIndex].preview} alt='' />
+					</aside>
+				)}
+			</div>
 		</section>
 	);
 };
