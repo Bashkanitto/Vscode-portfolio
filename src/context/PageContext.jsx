@@ -239,7 +239,7 @@ const App = () => {
 
 export default App;
 `,
-			preview: '/imgPortfolio.png',
+			preview: '/imgPlatform.png',
 		},
 		{
 			id: 4,

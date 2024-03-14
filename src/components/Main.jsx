@@ -31,7 +31,7 @@ export const Main = () => {
 			</div>
 
 			{isPreviewActive && (
-				<aside className='w-1/2 h-[80vh] overflow-scroll bg-white'>
+				<aside className='min-w-1/2 h-[80vh] overflow-scroll bg-white'>
 					<img src={projectList[activeIndex].preview} alt='' />
 				</aside>
 			)}
