@@ -8,9 +8,15 @@ import {
 	Settings,
 } from 'lucide-react';
 import { useState } from 'react';
+import { useMyContext } from '../context/PageContext';
 
 export const Toolbar = () => {
+	const { activeSidebar, setActiveSidebar } = useMyContext();
 	const [activeTab, setActiveTab] = useState(1);
+
+	const toggleSidebar = () => {
+		setActiveSidebar(!activeSidebar);
+	};
 
 	return (
 		<aside className='flex flex-col justify-between items-center  bg-neutral-700'>
@@ -20,7 +26,10 @@ export const Toolbar = () => {
 						paddingLeft: activeTab == 1 ? '10px' : '0',
 						borderLeft: activeTab == 1 ? '4px solid white' : '0',
 					}}
-					onClick={() => setActiveTab(1)}
+					onClick={() => {
+						setActiveTab(1);
+						toggleSidebar();
+					}}
 				>
 					<Files />
 				</button>

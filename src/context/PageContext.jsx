@@ -6,6 +6,7 @@ const MyContext = createContext();
 export const MyProvider = ({ children }) => {
 	const page = 'portfolio.js';
 	const [isPreviewActive, setIsPreviewActive] = useState(true);
+	const [activeSidebar, setActiveSidebar] = useState(true);
 	const [activeIndex, setActiveIndex] = useState(0);
 	const projectList = [
 		{
@@ -367,6 +368,8 @@ export default HeroSection;
 				isPreviewActive,
 				setIsPreviewActive,
 				projectList,
+				activeSidebar,
+				setActiveSidebar,
 			}}
 		>
 			{children}
