@@ -61,8 +61,13 @@ export const Toolbar = () => {
 					<Blocks />
 				</button>
 			</div>
-			<div className='flex flex-col gap-4'>
-				<button className='w-full'>
+			<div className='flex flex-col gap-2'>
+				<button
+					onClick={() =>
+						(window.location.href = 'https://bashkanitto.vercel.app')
+					}
+					className='w-full'
+				>
 					<CircleUserRound />
 				</button>
 				<button>
